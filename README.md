@@ -14,7 +14,10 @@ To run the container follow these instructions:
  docker cp models_list.json api_test:.
 
 5. Run the pipeline with:
- docker exec -ti api_test sh deploy_ml.sh 
+ docker cp config.json ml_training:.
+
+5. Run the pipeline with:
+ docker exec -ti api_test sh train_ml.sh 
 
 6. If everything was successfull the model will be deployed via a flask api though 0.0.0.0:8080/api/predict
 
